@@ -12,9 +12,9 @@ import one.digitalinnovation.personapi.repository.PersonRepository;
 @Service
 public class PersonService {
 
-	private PersonRepository personRepository;
-
-	private final PersonMapper personMapper = PersonMapper.INSTANCE;
+	private PersonRepository personRepository;	
+	
+	private PersonMapper personMapper = PersonMapper.INSTANCE;	
 
 	@Autowired
 	public PersonService(PersonRepository personRepository) {
@@ -27,6 +27,6 @@ public class PersonService {
 
 		Person savedPerson = personRepository.save(personToSave);
 		return MessageResponseDTO.builder().message("Created Person with ID " + savedPerson.getId()).build();
-	}
 
+	}
 }

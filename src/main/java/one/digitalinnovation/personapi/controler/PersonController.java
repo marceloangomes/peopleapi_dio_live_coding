@@ -14,11 +14,10 @@ import one.digitalinnovation.personapi.dto.request.PersonDTO;
 import one.digitalinnovation.personapi.dto.response.MessageResponseDTO;
 import one.digitalinnovation.personapi.service.PersonService;
 
-
 @RestController
 @RequestMapping("/api/v1/people")
-public class PersonController {	
-	
+public class PersonController {
+
 	private PersonService personService;
 
 	@Autowired(required = true)
@@ -26,9 +25,6 @@ public class PersonController {
 		super();
 		this.personService = personService;
 	}
-
-
-
 
 	@PostMapping
 	@ResponseStatus(value = HttpStatus.CREATED)
